@@ -44,8 +44,8 @@ public class SinglyLinkedList<E> {
         if(this.head == null) {
             throw new NullPointerException("null");
 
-        } else if(this.head.getValue() == value) {
-            head.setNext(head.getNext());
+    } else if(this.head.getValue() == value) {
+            head = head.getNext();
 
         } else if(this.last.getValue() == value) {
             deleteLast(value);
@@ -88,23 +88,23 @@ public class SinglyLinkedList<E> {
             prepend(value);
 
         } else {
-                Node<E> temp = head;
-                for(int i=1; i<index; i++) {
-                    temp = temp.getNext();
-                }
-                newNode.setNext(temp.getNext());
-                temp.setNext(newNode);
+            Node<E> temp = head;
+            for(int i=1; i<index; i++) {
+                temp = temp.getNext();
             }
-        this.size--;
+            newNode.setNext(temp.getNext());
+            temp.setNext(newNode);
+        }
+        this.size++;
     }
 
-    public String toString() {
-        StringBuilder result = new StringBuilder("");
-        Node node = this.head;
-        while (node != null) {
-            result.append(" ").append(node.getValue());
-            node = node.getNext();
-        }
-        return result.toString();
+public String toString() {
+    StringBuilder result = new StringBuilder("");
+    Node node = this.head;
+    while (node != null) {
+        result.append(" ").append(node.getValue());
+        node = node.getNext();
     }
+    return result.toString();
+}
 }
