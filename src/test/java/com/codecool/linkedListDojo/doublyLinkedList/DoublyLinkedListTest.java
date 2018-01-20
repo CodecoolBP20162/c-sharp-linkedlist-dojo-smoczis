@@ -1,10 +1,7 @@
-package com.codecool.linkedListDojo;
-
-import org.junit.jupiter.api.Test;
+package com.codecool.linkedListDojo.doublyLinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class DoublyLinkedListTest {
-
 
 }
