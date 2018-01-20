@@ -1,7 +1,5 @@
 package com.codecool.linkedListDojo.doublyLinkedList;
 
-import java.nio.DoubleBuffer;
-
 public class DoublyLinkedList<E> {
 
     private DoubleNode<E> head;
